@@ -24,7 +24,7 @@
                         ! Voici votre liste d'amis : </p>
                         
                         @if(count($insects) === 0)
-                            <?= "Vous n'avez aucun ami dans votre liste d'amis :'( <br> Cliquez <a href='projet-insecte/public/browseForFriends'>ici</a> pour trouver de nouveaux amis !"; ?>
+                            <?= "Vous n'avez aucun ami dans votre liste d'amis :'( <br> Cliquez <a href='/browseForFriends'>ici</a> pour trouver de nouveaux amis !"; ?>
                         @endif
 
 
