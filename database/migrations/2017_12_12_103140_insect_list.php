@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInsectsTable extends Migration
+class InsectList extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateInsectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('insects', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('insect_list', function (Blueprint $table) {
             $table->timestamps();
+            $table->integer('insect_id');
+            $table->integer('list_id');
         });
     }
 
@@ -26,6 +27,6 @@ class CreateInsectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('insects');
+        Schema::dropIfExists('insect_list');
     }
 }
