@@ -60,6 +60,8 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+
+
                         <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
                           <label for="age" class="col-md-4 control-label">Age</label>
 
@@ -73,6 +75,11 @@
                             @endif
                           </div>
                         </div>
+
+
+
+
+                        
                         <div class="form-group{{ $errors->has('food') ? ' has-error' : '' }}">
                           <label for="food" class="col-md-4 control-label">Food</label>
 
