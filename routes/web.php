@@ -21,3 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/browseForFriends', 'BrowseController@index');
 
+Route::get('/add/{insect}', 'BrowseController@add');
+
+Route::get('/delete/{insect}', 'HomeController@delete');

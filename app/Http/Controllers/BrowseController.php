@@ -22,17 +22,18 @@ class BrowseController extends Controller
         
       $list_id = Auth::id();
       
-      DB::table(‘insect_list’)
+      DB::table('insect_list')
           ->insert(
-              [‘insect_id’ => $insect_id, ‘list_id’ => $list_id]
+              ['insect_id' => $insect_id, 'list_id' => $list_id]
       );
       
-      DB::table(‘insect_list’)
+      DB::table('insect_list')
           ->insert(
-              [‘insect_id’ => $list_id, ‘list_id’ => $insect_id]
+              ['insect_id' => $list_id, 'list_id' => $insect_id]
       );
       
-      return redirect(‘browseForFriends’);
+      return redirect('browseForFriends');
    }
+
 
 }

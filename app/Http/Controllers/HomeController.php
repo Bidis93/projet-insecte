@@ -44,4 +44,15 @@ class HomeController extends Controller
         return view('home', compact('insects', 'loggedInsect', 'id'));
 
     }
+
+    public function delete(User $insect) {
+      $insect_id = $insect->id;
+        
+      $list_id = Auth::id();
+
+      DB::table('insect_list')->where('insect_id', $insect_id)->where('list_id', $list_id)->delete();
+      DB::table('insect_list')->where('insect_id', $list_id)->where('list_id', $insect_id)->delete();
+
+      return redirect('/home');
+   }
 }
