@@ -60,6 +60,58 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+                        <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
+                          <label for="age" class="col-md-4 control-label">Age</label>
+
+                          <div class="col-md-6">
+                            <input id="age" type="number" class="form-control" name="age" value="{{ old('age') }}" required autofocus>
+
+                            @if ($errors->has('age'))
+                              <span class="help-block">
+                                <strong>{{ $errors->first('age') }}</strong>
+                              </span>
+                            @endif
+                          </div>
+                        </div>
+                        <div class="form-group{{ $errors->has('food') ? ' has-error' : '' }}">
+                          <label for="food" class="col-md-4 control-label">Food</label>
+
+                          <div class="col-md-6">
+                            <input id="food" type="text" class="form-control" name="food" value="{{ old('food') }}" required autofocus>
+
+                            @if ($errors->has('food'))
+                              <span class="help-block">
+                                <strong>{{ $errors->first('food') }}</strong>
+                              </span>
+                            @endif
+                          </div>
+                        </div>
+                        <div class="form-group{{ $errors->has('family') ? ' has-error' : '' }}">
+                          <label for="family" class="col-md-4 control-label">Family</label>
+
+                          <div class="col-md-6">
+                            <input id="family" type="text" class="form-control" name="family" value="{{ old('family') }}" required autofocus>
+
+                            @if ($errors->has('family'))
+                              <span class="help-block">
+                                <strong>{{ $errors->first('family') }}</strong>
+                              </span>
+                            @endif
+                          </div>
+                        </div>
+                        <div class="form-group{{ $errors->has('race') ? ' has-error' : '' }}">
+                          <label for="race" class="col-md-4 control-label">Race</label>
+
+                          <div class="col-md-6">
+                            <input id="race" type="text" class="form-control" name="race" value="{{ old('race') }}" required autofocus>
+
+                            @if ($errors->has('race'))
+                              <span class="help-block">
+                                <strong>{{ $errors->first('race') }}</strong>
+                              </span>
+                            @endif
+                          </div>
+                        </div>                        
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
