@@ -14,8 +14,9 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Vous êtes connecté !
                 </div>
+                <div><a href="{{ route('informations.index') }}">Mes infos</a>
             </div>
         </div>
     </div>
