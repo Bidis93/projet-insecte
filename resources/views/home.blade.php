@@ -29,7 +29,7 @@
                         @if(count($insects) === 0)
                             <?= "Vous n'avez aucun ami dans votre liste d'amis :'("; ?>
                         @endif
-                        <p>Cliquez <a href='/browseForFriends'>ici</a> pour ajouter de nouveaux amis !</p>
+                        <p>Cliquez <a href='browseForFriends'>ici</a> pour ajouter de nouveaux amis !</p>
 
                         @foreach($insects as $insect)
                             <table>
