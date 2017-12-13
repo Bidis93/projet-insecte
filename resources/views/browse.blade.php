@@ -12,7 +12,7 @@
 	        </td>
 	        
 	        <td>
-	            <a href="add/{{ $insect->id }}">Ajoutez à la liste d'amis</a>
+	            <a href="add/{{ $insect->id }}">&nbsp; - Ajoutez à la liste d'amis</a>
 	        </td>
 	    </tr>
 	</table>

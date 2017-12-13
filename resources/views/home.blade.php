@@ -39,7 +39,7 @@
                                         ({{ $insect->race }}) - 
                                     </td>
                                     <td>
-                                        <a href="delete/{{ $insect->id }}">   Retirer de la liste d'amis</a>
+                                        <a href="delete/{{ $insect->id }}">&nbsp;   Retirer de la liste d'amis</a>
                                     </td>
                                 </tr>
                             </table>
