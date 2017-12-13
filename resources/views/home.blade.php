@@ -39,10 +39,10 @@
                                 <tr>
                                     <td>
                                         <a href="insect/{{ $insect->id }}">{{ $insect->name }} </a>
-                                        ({{ $insect->race }}) -
+                                        ({{ $insect->age }}) - ({{ $insect->food }})
                                     </td>
                                     <td>
-                                        <a href="delete/{{ $insect->id }}">   Retirer de la liste d'amis</a>
+                                        <a href="delete/{{ $insect->id }}">Retirer de la liste d'amis</a>
                                     </td>
                                 </tr>
                             </table>
