@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class insect extends Model
+class Insect extends Model
 {
     //
 }

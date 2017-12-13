@@ -15,6 +15,7 @@
                     @endif
                     
 
+
                     <div>
                         <p>Bonjour 
                         @foreach($loggedInsect as $insect)
@@ -46,7 +47,9 @@
 
                         
                     </div>
+
                 </div>
+                <div><a href="{{ route('informations.index') }}">Mes infos</a>
             </div>
         </div>
     </div>
