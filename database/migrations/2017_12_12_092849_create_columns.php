@@ -14,7 +14,7 @@ class CreateColumns extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('age');
+            $table->date('age');
             $table->string('race');
             $table->string('family');
             $table->string('food');

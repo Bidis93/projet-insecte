@@ -13,30 +13,33 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    
+
 
 
                     <div>
-                        <p>Bonjour 
+                        <p>Bonjour
                         @foreach($loggedInsect as $insect)
-                            <a href="profile/{{ $insect->id }}">
-                                {{ $insect->name }} 
-                            </a>
+
+                                {{ $insect->name }} !
+
                         @endforeach
+
+                        <a href = "{{ route('informations.index') }}">Cliquez ici pour voir vos informations !</A>
+                        <br><br>
                         ! Voici votre liste d'amis : <br>
                         </p>
-                        
+
                         @if(count($insects) === 0)
                             <?= "Vous n'avez aucun ami dans votre liste d'amis :'("; ?>
                         @endif
-                        <p>Cliquez <a href='/browseForFriends'>ici</a> pour ajouter de nouveaux amis !</p>
+                        <p>Cliquez <a href="browseForFriends">ici</a> pour ajouter de nouveaux amis !</p>
 
                         @foreach($insects as $insect)
                             <table>
                                 <tr>
                                     <td>
-                                        <a href="insect/{{ $insect->id }}">{{ $insect->name }} </a> 
-                                        ({{ $insect->race }}) - 
+                                        <a href="insect/{{ $insect->id }}">{{ $insect->name }} </a>
+                                        ({{ $insect->race }}) -
                                     </td>
                                     <td>
                                         <a href="delete/{{ $insect->id }}">   Retirer de la liste d'amis</a>
@@ -45,13 +48,12 @@
                             </table>
                         @endforeach
 
-                        
+
                     </div>
 
                 </div>
-                <div><a href="{{ route('informations.index') }}">Mes infos</a>
-            </div>
         </div>
     </div>
+  </div>
 </div>
 @endsection

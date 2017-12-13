@@ -10,30 +10,29 @@ use Illuminate\Support\Facades\Auth;
 
 class BrowseController extends Controller
 {
-   public function index() {
-   		
-   		$insects = User::all();
+    public function index()
+    {
+        $insects = User::all();
 
-   		return view('browse', compact('insects'));
-   }
+        return view('browse', compact('insects'));
+    }
 
-   public function add(User $insect) {
-   		$insect_id = $insect->id;
-        
-      $list_id = Auth::id();
-      
-      DB::table('insect_list')
+    public function add(User $insect)
+    {
+        $insect_id = $insect->id;
+
+        $list_id = Auth::id();
+
+        DB::table('insect_list')
           ->insert(
               ['insect_id' => $insect_id, 'list_id' => $list_id]
       );
-      
-      DB::table('insect_list')
+
+        DB::table('insect_list')
           ->insert(
               ['insect_id' => $list_id, 'list_id' => $insect_id]
       );
-      
-      return redirect('browseForFriends');
-   }
 
-
+        return redirect('browseForFriends');
+    }
 }

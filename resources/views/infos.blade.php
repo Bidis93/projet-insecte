@@ -7,13 +7,17 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Mes informations</div>
 
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+
+                        <p>Nom : {{ $insect->name }}</p><br>
+                        <p>Age : {{ $insect->age }}</p><br>
+                        <p>Race : {{ $insect->race }}</p><br>
+                        <p>Famille : {{ $insect->family }}</p><br>
+                        <p>Nourriture : {{ $insect->food }}</p><br>
+
                 </div>
+
+                <a href="home">Retour à l'accueil</a>
+
             </div>
         </div>
     </div>

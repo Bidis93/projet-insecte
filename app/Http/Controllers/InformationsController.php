@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class InformationsController extends Controller
 {
@@ -13,7 +16,10 @@ class InformationsController extends Controller
      */
     public function index()
     {
-        return view('infos');
+        $id = Auth::id();
+        $insect = User::find($id);
+
+        return view('infos', ['insect' => $insect]);
     }
 
     /**
