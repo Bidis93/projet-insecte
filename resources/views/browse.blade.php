@@ -18,4 +18,7 @@
 	</table>
 @endforeach
 
+
+<a href="home">Retour à l'accueil</a>
+
 @endsection

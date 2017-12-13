@@ -21,12 +21,14 @@
                                 {{ $insect->name }} 
                             </a>
                         @endforeach
-                        ! Voici votre liste d'amis : </p>
+                        ! Voici votre liste d'amis : <br>
+                        </p>
                         
                         @if(count($insects) === 0)
-                            <?= "Vous n'avez aucun ami dans votre liste d'amis :'( <br> Cliquez <a href='/browseForFriends'>ici</a> pour trouver de nouveaux amis !"; ?>
+                            <?= "Vous n'avez aucun ami dans votre liste d'amis :'("; ?>
                         @endif
-                        
+                        <p>Cliquez <a href='/browseForFriends'>ici</a> pour ajouter de nouveaux amis !</p>
+
                         @foreach($insects as $insect)
                             <table>
                                 <tr>
@@ -41,7 +43,7 @@
                             </table>
                         @endforeach
 
-
+                        
                     </div>
                 </div>
             </div>
