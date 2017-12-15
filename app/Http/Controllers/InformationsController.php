@@ -62,7 +62,9 @@ class InformationsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $id = Auth::id();
+        $insect = User::find($id);
+        return view('edit', ['insect' => $insect]);
     }
 
     /**
@@ -72,9 +74,17 @@ class InformationsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(User $insect, Request $request)
     {
-        //
+        $insect->name = request('name');
+        $insect->age = request('age');
+        $insect->race = request('race');
+        $insect->family = request('family');
+        $insect->food = request('food');
+
+        $insect->save();
+
+        return view('infos', compact('insect'));
     }
 
     /**
