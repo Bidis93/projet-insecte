@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('informations', 'InformationsController');
 
+Route::post('/informations/{insect}', 'InformationsController@update')->name('update');
+
 Route::get('/browseForFriends', 'BrowseController@index');
 
 Route::get('/add/{insect}', 'BrowseController@add');

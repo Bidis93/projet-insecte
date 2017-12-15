@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Mes informations</div>
+                <div class="panel-heading">Mes informations<a href="{{ route('informations.edit', $insect) }}">  Modifier</a></div>
 
 
                         <p>Nom : {{ $insect->name }}</p><br>
@@ -16,7 +16,7 @@
 
                 </div>
 
-                <a href="home">Retour à l'accueil</a>
+                <a href="{{ route('home') }}">Retour à l'accueil</a>
 
             </div>
         </div>
